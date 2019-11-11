@@ -8,5 +8,5 @@ public interface UserService {
 
     Boolean register(User user);
 
-    Boolean exist(User user);
+    Boolean exist(String num);
 }

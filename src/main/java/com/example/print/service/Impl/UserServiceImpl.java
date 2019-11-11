@@ -4,6 +4,7 @@ import com.example.print.dao.LoginAndRegisterMapper;
 import com.example.print.model.User;
 import com.example.print.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.expression.spel.ast.NullLiteral;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -33,9 +34,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Boolean exist(User user) {
-        Integer exist = userMapper.exist(user);
-        System.out.println(exist);
+    public Boolean exist(String num) {
+        Integer exist = userMapper.exist(num);
         if (exist > 0) {
             return true;
         } else {

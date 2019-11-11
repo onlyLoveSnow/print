@@ -17,8 +17,7 @@ public class LoginAndRegisterController {
     @RequestMapping("/register")
     @ResponseBody
     public Message register(User user) {
-        if (userService.exist(user)) {
-            System.out.println("dk");
+        if (userService.exist(user.getNum())) {
             return new Message("failed", "该学号已注册，请检查学号！");
         } else {
             Boolean register = userService.register(user);
