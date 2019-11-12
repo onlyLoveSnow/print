@@ -3,5 +3,6 @@
 <configuration>
     <typeAliases>
         <typeAlias alias="User" type="com.example.print.model.User"/>
+        <typeAlias alias="Print" type="com.example.print.model.Print"/>
     </typeAliases>
 </configuration>

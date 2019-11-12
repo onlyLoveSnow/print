@@ -1,5 +1,8 @@
 package com.example.print.model;
 
+import lombok.Data;
+
+@Data
 public class Print {
     private String printId;
     private String size;
@@ -14,4 +17,5 @@ public class Print {
     private String notes;
     private Long getCreate;
     private Long getModify;
+    private String number;
 }
