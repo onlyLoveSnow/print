@@ -31,13 +31,13 @@ public class LoginAndRegisterController {
 
     @RequestMapping("/login")
     @ResponseBody
-    public String login(User user) {
+    public Message login(User user) {
         User login = userService.login(user);
         System.out.println(login);
         if (login != null) {
-            return "true";
+            return new Message("success", "登录成功", login);
         } else {
-            return "false";
+            return new Message("failed", "登录失败", null);
         }
     }
 
